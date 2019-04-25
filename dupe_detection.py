@@ -75,5 +75,5 @@ class DupeDetector:
 
     def __new__(class_, *args, **kwargs):
         if class_._instance is None:
-            class_._instance = _DupeDetector()
+            class_._instance = _DupeDetector(*args, **kwargs)
         return class_._instance
